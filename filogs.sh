@@ -22,18 +22,30 @@ function ctrl_c(){
     echo -e "\n${yellowColour}[]${endColour}${grayColour}Leaving${endColour}"
     exit 0
 }
-
+#####################
+#       Banner      #
+#####################
+echo -e "${blueColour}    ____________    ____  ___________"
+sleep 0.05
+echo -e "   / ____/  _/ /   / __ \/ ____/ ___/"
+sleep 0.05
+echo -e "  / /_   / // /   / / / / / __ \__ \\"
+sleep 0.05
+echo -e " / __/ _/ // /___/ /_/ / /_/ /___/ /"
+sleep 0.05
+echo -e "/_/   /___/_____/\____/\____//____/  ${endColour}"
 #####################
 #       Options     #
 #####################
 echo -e "\n ${purpleColour}Available Filters: ${endColour}"
 
-echo -e "\n 1) List the ips"
+echo -e "\n 1) ${grayColour}List the ips ${endColour}"
 
-echo -e "\n 2) Filtered by ip"
+echo -e "\n 2) ${grayColour}Filtered by ip${endColour}"
 
-echo -e "\n 3) Filter by status code"
+echo -e "\n 3) ${grayColour}Filter by status code${endColour}"
 
+echo -e "\n 4) ${grayColour}Shows only the requests${endColour}"
 ######################
 #   Variable value   #
 ######################
@@ -46,7 +58,7 @@ printf "\n${redColour}[${yellowColour}*${redColour}]${turquoiseColour} Enter the
 
 # List the ips
 List(){
-cat "$file"|awk '{print $1}'|sort -u
+    cat "$file"|awk '{print $1}'|sort -u
 }
 
 # Filtered by ip
@@ -61,6 +73,10 @@ Status(){
     awk '$9 ~ /'$code'/ {print}' "$file"
 }
 
+# Show only requests
+Request(){
+    awk '{count[$7]++}; END { for (i in count) print i}' "$file"
+}
 ######################
 #   Select function  #
 ######################
@@ -73,6 +89,9 @@ case $option in
         Ip
          ;;
     3)
-	      Status
-	       ;;
+        Status
+         ;;
+    4)
+        Request
+         ;;
 esac
