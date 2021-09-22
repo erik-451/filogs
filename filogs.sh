@@ -25,7 +25,7 @@ function ctrl_c(){
 #####################
 #       Banner      #
 #####################
-echo -e "${blueColour}    ____________    ____  ___________"
+echo -e "${redColour}    ____________    ____  ___________"
 sleep 0.05
 echo -e "   / ____/  _/ /   / __ \/ ____/ ___/"
 sleep 0.05
@@ -34,18 +34,19 @@ sleep 0.05
 echo -e " / __/ _/ // /___/ /_/ / /_/ /___/ /"
 sleep 0.05
 echo -e "/_/   /___/_____/\____/\____//____/  ${endColour}"
+echo -e "${blueColour} By Erik451 ${endColour}"
 #####################
-#       Options     #
+#      Options      #
 #####################
-echo -e "\n ${purpleColour}Available Filters: ${endColour}"
 
-echo -e "\n 1) ${grayColour}List the ips ${endColour}"
+echo -e "\n ${yellowColour}Available Filters: ${endColour}"
 
-echo -e "\n 2) ${grayColour}Filtered by ip${endColour}"
+echo -e "\n 1) ${grayColour}List the ips ${endColour}   3) ${grayColour}Filter by status code${endColour}"
 
-echo -e "\n 3) ${grayColour}Filter by status code${endColour}"
+echo -e "\n 2) ${grayColour}Filtered by ip${endColour}  4) ${grayColour}Shows only the requests${endColour}"
 
-echo -e "\n 4) ${grayColour}Shows only the requests${endColour}"
+# More options soon...
+
 ######################
 #   Variable value   #
 ######################
