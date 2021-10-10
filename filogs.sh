@@ -38,13 +38,13 @@ echo -e "${redColour} by Erik451${endColour}"
 #       Options     #
 #####################
 echo -e "\n ${purpleColour}Available Filters: ${endColour}"
-echo -e "\n 1) ${grayColour}List the ips ${endColour}           4) ${grayColour}Shows only the requests${endColour}"
+echo -e "\n 1) ${grayColour}List the ips ${endColour}            5) ${grayColour}Show all IP GeoLocations${endColour}"
 
-echo -e "\n 2) ${grayColour}Filtered by ip${endColour}          5) ${grayColour}Show all IP GeoLocations${endColour}"
+echo -e "\n 2) ${grayColour}Filtered by ip${endColour}           6) ${grayColour}Show a single IP GeoLocation${endColour}"
 
-echo -e "\n 3) ${grayColour}Filter by status code${endColour}   6) ${grayColour}Show a single IP GeoLocation${endColour}"
+echo -e "\n 3) ${grayColour}Filter by status code${endColour}    7) ${grayColour}Show IP ports${endColour}"
 
-echo -e "\n 7) ${grayColour}Show IP ports${endColour}"
+echo -e "\n 4) ${grayColour}Shows only the requests${endColour}"
 
 ######################
 #   Variable value   #
