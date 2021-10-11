@@ -84,7 +84,7 @@ AllGeo(){
     bar="0"
     while IFS= read -r line
     do
-        curl "https://ipinfo.io/$line" >> /tmp/1.txt &&
+        curl -s "https://ipinfo.io/$line" >> /tmp/1.txt &&
         bar=$(($bar + 1))
         clear
         echo "Processing [$bar/${long}]"
@@ -111,7 +111,7 @@ AllGeo(){
 # (6) Ip location
 Geo(){
     printf "${redColour}Enter an IP: ${endColour}"; read iploc
-    curl "https://ipinfo.io/$iploc"
+    curl -s "https://ipinfo.io/$iploc"
 }
 
 # (7) Search ports of an IP
